@@ -16,24 +16,20 @@
         {
         productName,
         productPrice,
-        productDiscount,
-        imgSrc
+        productDiscount
        }
     ){
          return (
             <>
                 <p>{productName}</p>
-
-                {productDiscount? 
-                (
+                {productDiscount && (
                     <>
-                    <del>Price: ${productPrice}</del>
-                    <p>Discount price:${productDiscount}</p> 
-                    </> 
-                ):(
-                    <p>Price: ${productPrice}</p>
-                )
-            }
+                    <p><del>price: ${productPrice}</del></p>
+                    <p>
+                        Discount price:${productDiscount}
+                    </p>
+                    </>
+                )}
                 <button>Add to Cart</button>
             </>
          );

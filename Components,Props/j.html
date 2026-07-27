@@ -17,10 +17,13 @@
         productName,
         productPrice,
         productDiscount,
+        imageSrc
        }
     ){
          return (
-            <>
+            <div>
+                <img src={imageSrc} width="150"/>
+
                 <p>{productName}</p>
 
                 {productDiscount? 
@@ -34,7 +37,7 @@
                 )
             }
                 <button>Add to Cart</button>
-            </>
+            </div>
          );
        }
 
@@ -45,16 +48,19 @@
                 productName="Cotton socks"
                 productPrice="10.90"
                 productDiscount="5.45"
+                imageSrc="cotton-socks.png"
                 />
 
                 <ProductsDetails
                 productName="Tennis balls"
                 productPrice="6.00"
+                imageSrc="plain-t-shirt.png"
                 />
 
                 <ProductsDetails
                 productName="Plain T-Shirt"
                 productPrice="7.99"
+                imageSrc="tennis-balls.png"
                 />
             </>
             );
