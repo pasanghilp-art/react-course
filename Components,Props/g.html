@@ -23,6 +23,11 @@
             <>
                 <p>{productName}</p>
                 <p>price: ${productPrice}</p>
+                {productDiscount && (
+                    <p>
+                        Discount price:${productDiscount}
+                    </p>
+                )}
                 <button>Add to Cart</button>
             </>
          );
@@ -34,6 +39,7 @@
                 <ProductsDetails 
                 productName="Cotton socks"
                 productPrice="10.90"
+                productDiscount="5.45"
                 />
 
                 <ProductsDetails

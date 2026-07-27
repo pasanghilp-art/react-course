@@ -16,13 +16,24 @@
         {
         productName,
         productPrice,
-        productDiscount
+        productDiscount,
+        imgSrc
        }
     ){
          return (
             <>
                 <p>{productName}</p>
-                <p>price: ${productPrice}</p>
+
+                {productDiscount? 
+                (
+                    <>
+                    <del>Price: ${productPrice}</del>
+                    <p>Discount price:${productDiscount}</p> 
+                    </> 
+                ):(
+                    <p>Price: ${productPrice}</p>
+                )
+            }
                 <button>Add to Cart</button>
             </>
          );
@@ -34,6 +45,7 @@
                 <ProductsDetails 
                 productName="Cotton socks"
                 productPrice="10.90"
+                productDiscount="5.45"
                 />
 
                 <ProductsDetails
