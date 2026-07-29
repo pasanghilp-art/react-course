@@ -17,14 +17,35 @@
         function App(){
           const [input,setInput] = React.useState('');
 
-          function setChange(change){
-            setInput(change.target.value);
-          }
+            function setChange(text){
+                setInput(text.target.value);
+            }
+          
+            function setReset(){
+                setInput('');
+            }
+
+            function setExample(){
+                setInput('pasang');
+            }
 
           return(
           <>
-          <input onChange={setChange}
-           placeholder="Put your name"></input>
+          <input 
+            value={input}
+            onChange={setChange}
+            placeholder="Put your name"
+           />
+
+           <button
+            onClick={setReset}
+            >Reset
+            </button>
+
+           <button
+            onClick={setExample}>Example
+            </button>
+
           <p>Hello {input}</p>
           </>
         )
