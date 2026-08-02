@@ -1,0 +1,32 @@
+.paragraph-design{
+            font-family: arial;
+            font-size: 20px;
+        }
+
+        .input-design{
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-width: 1px;
+            width: 200px;
+        }
+
+        .button-design{
+             background-color: rgb(0, 123, 255);
+            color: white;
+            margin-right: 5px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .show-hide-button {
+            border-radius: 7px;
+            border-width: 1px;
+            background-color: transparent;
+            font-family: Arial;
+            font-size: 13px;
+            margin: 10px;
+        }
