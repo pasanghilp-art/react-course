@@ -1,5 +1,5 @@
-import RobotProfileImage from "../assets/robot.png";
-import UserProfileImage from "../assets/user.png";
+import RobotProfileImage from "../assets/images.jpg";
+import UserProfileImage from "../assets/user.jpg";
 import './ChatMessage.css'
 export function ChatMessage({ message, sender }) {
     //const message = props.message;

@@ -1,4 +1,4 @@
-.chat-message-user {
+            .chat-message-user {
                 display: flex;
                 justify-content: end;
                 align-items: start;
@@ -19,6 +19,9 @@
                 max-width: 300px;
             }
 
-            .chat-message-profile{
+            .chat-message-profile {
                 width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                object-fit: cover;
             }
