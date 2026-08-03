@@ -59,6 +59,11 @@ export function ChatInput({ chatMessages, setChatMessages }) {
         }
     }
 
+    function resetMessage(){
+        setChatMessages([]);
+        localStorage.setItem('messages',JSON.stringify([]));
+    }
+
     return (
         <div className="chat-input-container">
             <input
@@ -71,6 +76,10 @@ export function ChatInput({ chatMessages, setChatMessages }) {
             />
             <button onClick={sendMessage} className="send-button">
                 Send
+            </button>
+            <button onClick={resetMessage}
+                className="clear-button">
+                Clear
             </button>
         </div>
     );

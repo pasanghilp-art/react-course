@@ -27,3 +27,14 @@
                 height: 40px;
                 margin: -15px;
             }
+
+            .clear-button{
+                 background-color: rgb(180, 201, 191);
+                font-size: 15px;
+                color: black;
+                padding: 12px 20px;
+                margin-left: 10px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+            }
