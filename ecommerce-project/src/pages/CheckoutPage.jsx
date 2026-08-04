@@ -77,7 +77,7 @@ export function CheckoutPage() {
                                     <div className="delivery-option">
                                         <input
                                             type="radio"
-                                            checked
+                                            defaultChecked
                                             className="delivery-option-input"
                                             name="delivery-option-1"
                                         />
@@ -179,7 +179,7 @@ export function CheckoutPage() {
                                     <div className="delivery-option">
                                         <input
                                             type="radio"
-                                            checked
+                                            defaultChecked
                                             className="delivery-option-input"
                                             name="delivery-option-2"
                                         />
