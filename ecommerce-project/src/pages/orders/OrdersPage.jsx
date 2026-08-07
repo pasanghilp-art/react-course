@@ -1,16 +1,16 @@
 import axios from "axios";
 import dayjs from "dayjs";
-import { priceFormater } from "../utils/money";
+import { priceFormater } from "../../utils/money";
 import { useState, useEffect, Fragment } from "react";
-import { Header } from "../Components/Header";
-import BuyAgainIcon from "../assets/images/icons/buy-again.png";
+import { Header } from "../../Components/Header";
+import BuyAgainIcon from "../../assets/images/icons/buy-again.png";
 import "./OrdersPage.css";
 
 export function OrdersPage({ cart }) {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        axios.get("api/orders?expand=products").then((response) => {
+        axios.get("/api/orders?expand=products").then((response) => {
             setOrders(response.data);
         });
     }, []);
