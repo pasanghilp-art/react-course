@@ -209,3 +209,9 @@
   margin-top: 20px;
   margin-bottom: 19px;
 }
+
+.textBox {
+  width: 50px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
