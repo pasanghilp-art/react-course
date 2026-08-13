@@ -3,18 +3,18 @@ import { useState } from "react";
 import { priceFormater } from "../../utils/money";
 
 export function CartItemDetails({ cartItem, loadCart }) {
-    const [textInput, setTextInput] = useState(false);
+    const [quantityInput, setQuantityInput] = useState(false);
     const [quantity, setQuantity] = useState(cartItem.quantity);
 
     const updateCartItem = async () => {
-        if (textInput) {
+        if (quantityInput) {
             await axios.put(`/api/cart-items/${cartItem.product.id}`, {
                 quantity: Number(quantity),
             });
             await loadCart();
-            setTextInput(false);
+            setQuantityInput(false);
         } else {
-            setTextInput(true);
+            setQuantityInput(true);
         }
     };
 
@@ -23,8 +23,19 @@ export function CartItemDetails({ cartItem, loadCart }) {
         await loadCart();
     };
 
-    const textUpdater = (event) => {
+    const QuantityUpdater = (event) => {
         setQuantity(event.target.value);
+    };
+
+    const QuantityEvent = (event) => {
+        const keyPressed = event.key;
+        if (keyPressed === "Enter") {
+            updateCartItem();
+        }
+        if (keyPressed === "Escape") {
+            setQuantity(cartItem.quantity);
+            setQuantityInput(false);
+        }
     };
     return (
         <>
@@ -38,12 +49,13 @@ export function CartItemDetails({ cartItem, loadCart }) {
                 <div className="product-quantity">
                     <span>
                         Quantity:
-                        {textInput ? (
+                        {quantityInput ? (
                             <input
                                 type="text"
                                 className="textBox"
                                 value={quantity}
-                                onChange={textUpdater}
+                                onChange={QuantityUpdater}
+                                onKeyDown={QuantityEvent}
                             />
                         ) : (
                             <span className="quantity-label">
