@@ -21,8 +21,13 @@ export function Header({ cart }) {
         setSearch(event.target.value);
     };
 
-    let totalQuantity = 0;
+    const searchEvent = () => {
+        if (event.key === "Enter") {
+            SearchNavigate();
+        }
+    };
 
+    let totalQuantity = 0;
     cart.forEach((cartItem) => {
         totalQuantity += cartItem.quantity;
     });
@@ -42,6 +47,7 @@ export function Header({ cart }) {
                     placeholder="Search"
                     value={search}
                     onChange={saveSearchText}
+                    onKeyDown={searchEvent}
                 />
 
                 <button className="search-button" onClick={SearchNavigate}>
