@@ -17,9 +17,11 @@ function App() {
     //const chatMessages = array[0];
     //const setChatMessages = array[1];
 
+    const title = `${chatMessages.length} Messages`;
+
     return (
         <>
-            <title>Chatbot Project</title>
+            <title>{title}</title>
             <link rel="icon" type="image/svg+xml" href={RobotProfileImage} />
             <div className="app-container">
                 <ChatMessages chatMessages={chatMessages} />
