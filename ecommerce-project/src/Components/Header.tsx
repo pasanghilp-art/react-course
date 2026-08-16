@@ -25,11 +25,11 @@ export function Header({ cart }: HeaderProps ) {
         navigate(`/?search=${search}`);
     };
 
-    const saveSearchText = (event) => {
+    const saveSearchText = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(event.target.value);
     };
 
-    const searchEvent = () => {
+    const searchEvent = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === "Enter") {
             SearchNavigate();
         }
